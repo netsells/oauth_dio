@@ -124,8 +124,8 @@ class OAuth {
         .then((res) => extractor(res))
         .then((token) => storage.save(token))
         .catchError((err) {
-      print(err.response.data);
-      print(err.request.headers);
+      print(err.response?.data);
+      print(err.request?.headers);
       throw err;
     });
   }
